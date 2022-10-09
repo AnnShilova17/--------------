@@ -1,13 +1,3 @@
-@media(max-width: 600px){article, .plus2, .price2, footer, 
-    .free_lesson__form, .header__nav,.feedback
-    {flex-direction: column;flex-wrap: wrap; align-items: center;
-        justify-content: center;}}
-@media(max-width: 600px){.header__main_title, .header__main_title__text
-        { width: calc(100%/2);}}
-@media(max-width: 600px){.mail, .fa-instagram, .fa-square-facebook, .fa-twitter, .fa-phone, .phone 
-        {font-size: 25px; }}
-@media(max-width: 600px){.price3, .plus2{zoom: 150%; }}
-@media(max-width: 600px){.title{font-size: 150%;}}
 :root{--black:#1c1917;
     --green: #65a30d;
     --orange: #f97316;
@@ -26,6 +16,14 @@ header { background-image: url(landing-materials/hero.jpg);
     height: 800px;
     background-size: cover;
     background-position: center top;    }
+
+.background{background-color: #dcd8d679;
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    display: none;
+    top: 0;}
+@media(max-width: 600px){.background{display: flex; }}
 .header__nav {max-width: 1024px;
     width: 100%;
     margin: 0 auto;
@@ -76,6 +74,7 @@ nav {display:flex ;
     flex-wrap: wrap;
     margin-top: 80px;
     margin-bottom: 50px;}
+@media(max-width: 600px){.title{font-size: 40px; padding: 20px; }}
 .plus2 {display: flex;
     justify-content: center;
     }
@@ -109,10 +108,12 @@ article {max-width: 1024px;
 
 .article__title {    font-size: 30px;
     margin-bottom: 50px;   }
+@media(max-width: 600px){.article__title {font-size: 40px; padding: 20px;  }}
 .article__text {color: #44403c;
     margin-top: 20px;
     line-height: 20px;
     font-weight: 500;}
+
 .free_lesson {background-color: #ffedd5;
     display: flex;
     flex-direction: column;
@@ -126,6 +127,7 @@ article {max-width: 1024px;
     flex-wrap: wrap;
     margin-top: 80px;
     margin-bottom: 20px;}
+@media(max-width: 600px){.free_lesson_title, .article__text{padding: 20px 10px; }}
 .free_lesson_text{font-size: 18px;
     display: flex;
     justify-content: center;
@@ -133,13 +135,16 @@ article {max-width: 1024px;
     margin-top: 0px;
     margin-bottom: 50px;
     color: #78716c;}
+@media(max-width: 600px){.free_lesson_text{font-size: 23px;}}
 .free_lesson__form{display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin:10px;}
+
 form{display: flex;
     justify-content: center;
     flex-wrap: wrap;}
+
 #form__name{margin: 0 10px;
     font-size: 20px;
     border-radius: 10px;
@@ -150,6 +155,8 @@ form{display: flex;
     border-radius: 10px;
     border: 1px solid var(--grey);
     padding: 15px 10px;}
+@media(max-width: 600px){.free_lesson__form, form {padding:20px 0 ;}}
+@media(max-width: 600px){#form__phone, #form__name {width: 100%; margin: 10px 0;}}
 .feedback {background-color: 
     #fafaf9;
     padding: 30px 0;}
@@ -170,8 +177,10 @@ form{display: flex;
     color:    #44403c;
     margin-bottom: 10px;
     font-size: 20px;}
+@media(max-width: 600px){.feedback__item-title {padding: 20px 10px;}}
 .feedback__item-text{color: #78716c;
     line-height: 25px;}
+@media(max-width: 600px){.feedback__item-text {font-size: 18px; padding: 0 10px;}}
 .line{max-width: 600px;
     border: 1px solid var(--grey);
     margin-top: 20px;}
@@ -244,4 +253,15 @@ footer { display: flex;
 .fa-instagram{margin-left: 15px;}
 .fa-square-facebook{margin-left: 15px;}
 .fa-twitter{margin-left: 15px;}
+@media(max-width: 600px){article, .plus2, .price2, footer, 
+    .free_lesson__form, .header__nav,.feedback
+    {flex-wrap: wrap; justify-content: center;}}
+@media(max-width: 600px){.header__main_title, .header__main_title__text
+        { width: calc(100%/2);}}
 
+@media(max-width: 600px){.price3, .plus2{zoom: 150%; }}
+
+@media(max-width: 600px) { .group-people{margin: 0 auto;}}
+@media(max-width: 600px) {.article__title, .article__text, .free_lesson_title, .free_lesson_text, .title, .feedback__item {margin: 0 10px;}}
+@media(max-width: 600px){.mail, .fa-instagram, .fa-square-facebook, .fa-twitter, .fa-phone, .feedback__item-title {font-size: 30px; }}
+@media(max-width: 600px){.article__text {font-size: 25px; }}
