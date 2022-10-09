@@ -1,7 +1,18 @@
+@media(max-width: 600px){article, .plus2, .price2, footer, 
+    .free_lesson__form, .header__nav,.feedback
+    {flex-direction: column;flex-wrap: wrap; align-items: center;
+        justify-content: center;}}
+@media(max-width: 600px){.header__main_title, .header__main_title__text
+        { width: calc(100%/2);}}
+@media(max-width: 600px){.mail, .fa-instagram, .fa-square-facebook, .fa-twitter, .fa-phone, .phone 
+        {font-size: 25px; }}
+@media(max-width: 600px){.price3, .plus2{zoom: 150%; }}
+@media(max-width: 600px){.title{font-size: 150%;}}
 :root{--black:#1c1917;
     --green: #65a30d;
     --orange: #f97316;
     --grey:#d6d3d1}
+
 body {font-family: 'Nunito Sans', sans-serif;
     color:var(--black) ;
     font-weight: 600;}
@@ -20,17 +31,20 @@ header { background-image: url(landing-materials/hero.jpg);
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;   }
+    justify-content: space-between;
+    flex-wrap: wrap;   }
 #logo { width: 100px;
     height: 100px;
     margin-top: 10px;}
 nav {display:flex ;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 10px;}
 .nav__price{padding:10px; }
 .nav__feedback{padding: 10px;}
 .phone {display:flex ;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 10px;}
 .phone__icon{padding: 5px;}
 .phone__text{padding: 5px;}
@@ -42,6 +56,7 @@ nav {display:flex ;
     max-width: 600px;
     margin-top: 100px;
     margin-bottom: 50px;}
+
 .header__main_title__text {max-width: 400px;
     font-size: 20px;
     font-weight: 500;
@@ -58,13 +73,16 @@ nav {display:flex ;
 .title {font-size: 35px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 80px;
     margin-bottom: 50px;}
 .plus2 {display: flex;
-    justify-content: center;}
+    justify-content: center;
+    }
 .plus__item{display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     background-color: #fafaf9;
     border-radius: 10px;
@@ -86,7 +104,9 @@ article {max-width: 1024px;
     margin: 0 auto;
     display:flex ;
     align-items: flex-start;
+    flex-wrap: wrap;
     margin-top: 80px;}
+
 .article__title {    font-size: 30px;
     margin-bottom: 50px;   }
 .article__text {color: #44403c;
@@ -96,25 +116,30 @@ article {max-width: 1024px;
 .free_lesson {background-color: #ffedd5;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 80px;
     padding-bottom: 100px; }
 .free_lesson_title{font-size: 35px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 80px;
     margin-bottom: 20px;}
 .free_lesson_text{font-size: 18px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 0px;
     margin-bottom: 50px;
     color: #78716c;}
 .free_lesson__form{display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin:10px;}
 form{display: flex;
-    justify-content: center;}
+    justify-content: center;
+    flex-wrap: wrap;}
 #form__name{margin: 0 10px;
     font-size: 20px;
     border-radius: 10px;
@@ -131,6 +156,7 @@ form{display: flex;
 .feedback__text{max-width: 600px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
@@ -140,6 +166,7 @@ form{display: flex;
     margin-bottom: 10px;}
 .feedback__item-title{display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     color:    #44403c;
     margin-bottom: 10px;
     font-size: 20px;}
@@ -151,9 +178,11 @@ form{display: flex;
 .price{max-width: 1024px;
     margin: 0 auto;}
 .price2 {display: flex;
-    justify-content: center;}
+    justify-content: center;
+    flex-wrap: wrap;}
 .price3 {display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
     border:2px solid var(--grey) ;
     border-radius: 10px;
@@ -161,6 +190,7 @@ form{display: flex;
     padding-left: 20px;}
 .price__item {display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin-bottom: 30px;
     color:    #57534e;
     font-size: 14px; }
@@ -175,7 +205,8 @@ form{display: flex;
 #price__button{display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;}
+    align-items: flex-end;
+    flex-wrap: wrap;}
 .price__title1{ color: var(--orange);
     font-size: 20px;
     margin-top: 30px;
@@ -183,26 +214,31 @@ form{display: flex;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;}
+    align-items: flex-start;
+    flex-wrap: wrap;}
 .price__title2{font-size: 20px;
     margin-bottom: 20px;
     font-weight: 900;}
 .price__item1{padding-bottom: 10px;}
 .fa-check {color:var(--green);}
 .footer__phone{display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 70px;
     font-size: 16px;}
 footer { display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: var(--grey);
     color: #57534e;
     margin-top: 130px;}
 .footer__icon{display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 70px;
     font-size: 25px;}
 .mail{display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 70px;}
 .fa-instagram{margin-left: 15px;}
