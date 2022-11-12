@@ -14,18 +14,39 @@
 
     <body>
         <header>
-            
-            <div class="header__nav">
-                <img id=logo src="landing-materials/logo.svg" alt="логотип"/>
-            <nav>
-                <div class="nav__price"><a href="#price"> Стоимость </a></div> 
-                <div class="nav__feedback"><a href="#feedback"> Отзывы </a></div>
-            </nav>
-            <div class="phone">
-                <div class="phone__icon"><i class="fa-solid fa-phone" ></i></div>
-                <div class="phone__text"><p> +7 (123) 456-78-90 </p></div>
-            </div>
-            </div>
+                <div class="header__nav">
+                    <div class="header__logo header__logo_comp">
+                        <img id=logo src="landing-materials/logo.svg" alt="логотип"/>
+                    </div>
+                    <div class="header__comp">    
+                        <nav>
+                            <div class="nav__price"><a href="#price"> Стоимость </a></div> 
+                            <div class="nav__feedback"><a href="#feedback"> Отзывы </a></div>
+                        </nav>
+                        <div class="phone">
+                            <div class="phone__icon"><i class="fa-solid fa-phone" ></i></div>
+                            <div class="phone__text"><p> +7 (123) 456-78-90 </p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__nav">
+                    <div class="header__logo header__logo_phone">
+                        <img id=logo src="landing-materials/logo.svg" alt="логотип"/>
+                    </div>
+                    <div class="header__phone">
+                        <div id ="header__phone_button_gamburger">
+                            <button onclick="openMenu()"><i class="fa-solid fa-bars"></i></button>
+                        </div>
+                        <div id ="header__phone_button_cross">
+                            <button onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <div class="header__phone_menu" id="header__phone_menu">
+                            <div class="nav__price"><a href="#price"> Стоимость </a></div> 
+                            <div class="nav__feedback"><a href="#feedback"> Отзывы </a></div>
+                            <div class="phone__text"><p> +7 (123) 456-78-90 </p></div>
+                        </div>
+                    </div>
+                </div>
             <div class="header__main">  
                 <div class="header__main_title">
                     <h1>Лучший способ заговорить на английском</h1>
@@ -38,9 +59,6 @@
                 <button class="button"> Записаться на пробный урок </button>
             </div>
             <div class="overlay"></div> 
-            
-            <div class="background"></div>
-           
         </header>
         <main>
             <section class="plus">
@@ -232,5 +250,56 @@
                 <a href="www.mail.com">english_house@email.com</a>
            </div>
         </footer>
+        <script>
+            let isOpen = false
+            let close = false
+            let isOpenButton = document.getElementById("header__phone_button_gamburger")
+            let closedButton = document.getElementById("header__phone_button_cross")
+
+            if (isOpenButton) {
+                closedButton.style.display = "none"
+            }
+
+        
+
+            function openMenu() {
+                const myMenu = document.getElementById("header__phone_menu")
+                
+                
+                if (isOpen) {
+                    myMenu.style.display = "none"
+                    isOpenButton.style.display = "flex"
+                    
+                    isOpen = false
+                } else {
+                    myMenu.style.display = "flex"
+                    closedButton.style.display = "flex"
+                    isOpenButton.style.display = "none"
+                    isOpen = true
+                }
+            
+            }
+            function closeMenu() {
+                const myMenu = document.getElementById("header__phone_menu")
+                
+
+                if (close) {
+                    myMenu.style.display = "none"
+                    closedButton.style.display = "none"
+                    isOpenButton.style.display = "flex"
+                    close = false
+                } else {
+                    myMenu.style.display = "flex"
+                    closedButton.style.display = "flex"
+                    close = true
+                }
+
+            
+        }
+
+        </script> 
+
+        
+
     </body>
 </html>

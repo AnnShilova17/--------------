@@ -17,20 +17,34 @@ header { background-image: url(landing-materials/hero.jpg);
     background-size: cover;
     background-position: center top;    }
 
-.background{background-color: #dcd8d679;
-    width: 100%;
-    height: 800px;
-    position: absolute;
-    display: none;
-    top: 0;}
 @media(max-width: 600px){.background{display: flex; }}
-.header__nav {max-width: 1024px;
-    width: 100%;
+.header__nav{max-width: 1024px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: flex-start;}
+.header__logo {max-width: 1024px;   
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;   }
+.header__comp{max-width: 1024px;
+    width: 50%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;   }
+    flex-wrap: wrap; }
+.fa-bars, .fa-xmark{font-size: 40px;}
+.header__phone_menu{background-color:#fafaf9 ;
+    padding: 50px;
+    font-size: 25px;
+    border-radius:20px ;
+    box-shadow: 2px 2px 2px #78716c ;
+    display: none;
+    position: absolute;}
+#header__phone_button_gamburger, #header__phone_button_cross 
+    {display: flex;
+    justify-content: end;}
+
 #logo { width: 100px;
     height: 100px;
     margin-top: 10px;}
@@ -46,6 +60,7 @@ nav {display:flex ;
     margin-top: 10px;}
 .phone__icon{padding: 5px;}
 .phone__text{padding: 5px;}
+
 .header__main {max-width: 1024px;
     margin: 0 auto;    }
 .header__main_title {font-size: 60px;
@@ -254,7 +269,7 @@ footer { display: flex;
 .fa-square-facebook{margin-left: 15px;}
 .fa-twitter{margin-left: 15px;}
 @media(max-width: 600px){article, .plus2, .price2, footer, 
-    .free_lesson__form, .header__nav,.feedback
+    .free_lesson__form, .feedback
     {flex-wrap: wrap; justify-content: center;}}
 @media(max-width: 600px){.header__main_title, .header__main_title__text
         { width: calc(100%/2);}}
@@ -265,3 +280,6 @@ footer { display: flex;
 @media(max-width: 600px) {.article__title, .article__text, .free_lesson_title, .free_lesson_text, .title, .feedback__item {margin: 0 10px;}}
 @media(max-width: 600px){.mail, .fa-instagram, .fa-square-facebook, .fa-twitter, .fa-phone, .feedback__item-title {font-size: 30px; }}
 @media(max-width: 600px){.article__text {font-size: 25px; }}
+
+@media(max-width: 600px){.header__comp, .header__logo_comp {display: none;}}
+@media(min-width: 601px){.header__phone, .header__logo_phone {display: none;}}
